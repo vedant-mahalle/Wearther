@@ -4,7 +4,7 @@ var data;
 const api_key = "270a8dcad2bd53728ecb27fdb2fe3241";
 
 async function checkWeather() {
-    const api_url = `http://api.openweathermap.org/data/2.5/weather?units=metric&q=${searchText.value}`;
+    const api_url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${searchText.value}`;
     try {
         const response = await fetch(api_url + `&appid=${api_key}`);
         if (!response.ok) {

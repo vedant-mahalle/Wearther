@@ -130,7 +130,27 @@ html {
     font-size: x-large;
 }
 
-.weather_description span{
+.weather_description span {
     margin: 5px;
     text-align: center;
+}
+
+.social {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.social i {
+    display: block;
+    color: white;
+    padding: 5px;
+    margin: 8px;
+    font-size: 24px;
+    transition: all .50s ease;
+}
+
+.social i:hover {
+    color: aqua;
+    transform: translateY(-10px);
 }
