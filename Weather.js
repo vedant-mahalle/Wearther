@@ -24,12 +24,27 @@ document.getElementById("searchButton").addEventListener("click", function () {
 });
 
 function loadData(data) {
-    document.querySelector("#time").innerHTML = Date().slice(0, 24);
+    // document.querySelector("#time").innerHTML = Date().slice(0, 24);
     document.querySelector("#city").innerHTML = data.name;
     document.querySelector("#wind span").innerHTML = "Speed:" + data.wind["speed"] + 'm/sec';
     document.querySelector("#deg").innerHTML = "Deg:" + data.wind['deg'] + "°";
     document.querySelector("#temp span").innerHTML = data.main["temp"] + "°C";
     document.querySelector("#description").innerHTML = "Deg:" + data.weather[0]['description'] + "°";
     document.querySelector("#Weather").innerHTML = data.weather[0]['main'];
-
 }
+
+function clockTime() {
+    let now_time = new Date();
+    // let day = now_time.toString();
+    let hours = now_time.getHours().toString().padStart(2, '0');
+    let Minutes = now_time.getMinutes().toString().padStart(2, '0');
+    let seconds = now_time.getSeconds().toString().padStart(2,
+        '0');
+    // .padStart(2, '0') ensures that each value is represented by at least two digits (adding leading zeros if necessary)
+    let time = hours + ':' + Minutes + ':' + seconds;
+    console.log(now_time);
+    document.querySelector("#time").textContent = time;
+}
+
+setInterval(clockTime,1000);
+clockTime();

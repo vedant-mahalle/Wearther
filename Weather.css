@@ -154,3 +154,20 @@ html {
     color: aqua;
     transform: translateY(-10px);
 }
+
+#date{
+    color: aliceblue;
+    font-size: 43px;
+    width: fit-content;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li{
+    color: #ccc;
+    display: flex;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 5px;
+}
