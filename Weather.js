@@ -15,12 +15,14 @@ async function checkWeather() {
         loadData(data);
     } catch (error) {
         console.error('Error fetching data:', error);
+        alert('Have a proper location');
     }
 }
 
 document.getElementById("searchButton").addEventListener("click", function () {
     console.log(searchText.value)
     checkWeather();
+    changeFonts();
 });
 
 function loadData(data) {
@@ -32,7 +34,9 @@ function loadData(data) {
     document.querySelector("#description").innerHTML = "Deg:" + data.weather[0]['description'] + "°";
     document.querySelector("#Weather").innerHTML = data.weather[0]['main'];
 }
-
+function changeFonts(){
+    document.querySelector('#time').style.fontSize = 'xx-large';
+}
 function clockTime() {
     let now_time = new Date();
     // let day = now_time.toString();
@@ -42,7 +46,7 @@ function clockTime() {
         '0');
     // .padStart(2, '0') ensures that each value is represented by at least two digits (adding leading zeros if necessary)
     let time = hours + ':' + Minutes + ':' + seconds;
-    console.log(now_time);
+    // console.log(now_time);
     document.querySelector("#time").textContent = time;
 }
 
