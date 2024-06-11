@@ -1,7 +1,7 @@
 var searchText = document.getElementById("search");
 var data;
 // console.log("Search Text:", searchText.value)
-const api_key = "270a8dcad2bd53728ecb27fdb2fe3241";
+const api_key = "ab500696be7b067c3979764a9b1dc5db";
 
 async function checkWeather() {
     const api_url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${searchText.value}`;
